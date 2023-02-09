@@ -9,8 +9,11 @@ namespace Logic.Ilogic
     public interface IProductLogic
     {
         List<Product> GetAllProducts();
-        void InsertProduct(Product product);
+        int InsertProduct(Product product);
         void DeleteProduct(int id);
+        void UpdateProduct(Product product);
+
+
 
     }
 }

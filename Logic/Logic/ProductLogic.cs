@@ -17,10 +17,11 @@ namespace Logic.Logic
         {
             return _serviceContext.Set<Product>().ToList();
         }
-        public void InsertProduct(Product product)
+        public int InsertProduct(Product product)
         {
             _serviceContext.Products.Add(product);
             _serviceContext.SaveChanges();
+            return product.Id;
         }
   
         public void DeleteProduct(int id)
@@ -28,6 +29,11 @@ namespace Logic.Logic
             var productToDelete = _serviceContext.Set<Product>()
                 .Where(x => x.Id == id);
             _serviceContext.SaveChanges();
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            throw new NotImplementedException();
         }
     }
 }

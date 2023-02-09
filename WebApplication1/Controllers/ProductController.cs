@@ -18,6 +18,7 @@ namespace API.Controllers
             _logger = logger;
             _productService = productService;
         }
+
         [HttpPost(Name = "InsertProduct")]
         public int Post([FromBody] Product product)
         {
@@ -34,13 +35,14 @@ namespace API.Controllers
         [HttpDelete(Name = "DeleteProduct")]
 
         public void DeleteProductItem([FromQuery] int id)
-        {
-            _productService.DeleteProduct(id);
+          {
+           _productService.DeleteProduct(id);
         }
-            [HttpPatch(Name = "ModifyProduct")]
-            public void Patch([FromBody] Product product)
+
+        [HttpPatch(Name = "ModifyProduct")]
+        public void Patch([FromBody] Product product)
             {
-                _productService.UpdateProduct(product);
+              _productService.UpdateProduct(product);
         }
     }
 }

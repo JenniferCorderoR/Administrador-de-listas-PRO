@@ -13,9 +13,9 @@ namespace Entities.Entities
             IsActive = true;
             IsPublic = true;
         }
-        public Guid IdWeb { get; set; }
+       /* public Guid IdWeb { get; set; }*/
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int Price { get; set; }
         public int Stock { get; set; }
         public bool IsActive { get; set; }

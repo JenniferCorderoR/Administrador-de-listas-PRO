@@ -15,12 +15,12 @@ namespace API.Services
 
         public void DeleteProduct(int id)
         {
-            throw new NotImplementedException();
+            _productLogic.DeleteProduct(id);
         }
 
         public List<Product> GetAllProducts()
         {
-            throw new NotImplementedException();
+            return _productLogic.GetAllProducts();
         }
         public int InsertProduct(Product product)
         {
@@ -29,7 +29,8 @@ namespace API.Services
         }
         public void UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            _productLogic.UpdateProduct(product);
+
         }
     }
 }
